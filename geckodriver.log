@@ -8,3 +8,9 @@
 See /usr/include/servers/bootstrap_defs.h for the error codes.
 2017-04-23 12:31:28.451 plugin-container[33930:826250] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9803, name = 'com.apple.CFPasteboardClient'
 See /usr/include/servers/bootstrap_defs.h for the error codes.
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
