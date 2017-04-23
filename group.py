@@ -54,17 +54,18 @@ while var==1 :
 		OPath = '//*[@id="group-topics"]/div[2]/table/tbody/tr['+'%d'%i+']'+'/td/span'
 		XPath = '//*[@id="group-topics"]/div[2]/table/tbody/tr['+'%d'%i+']'+'/td/a'
 		latest = driver.find_element_by_xpath(XPath).text
+		link = driver.find_element_by_xpath(XPath).get_attribute('href')
 		try:
 			up = driver.find_element_by_xpath(OPath)
 			if latest not in upTitle:
 				if latest.find(u'上海')!= -1:
 					upTitle.append(latest)
-					send_mail(mailto_list,latest,'https://www.douban.com/group/515813/')
+					send_mail(mailto_list,latest,link)
 		except Exception, e:
 			if latest not in normalTitle:
 				if latest.find(u'上海')!= -1:
 					normalTitle.append(latest)
-					send_mail(mailto_list,latest,'https://www.douban.com/group/515813/')
+					send_mail(mailto_list,latest,link)
 	time.sleep(60)
 	driver.refresh()
 driver.close()
