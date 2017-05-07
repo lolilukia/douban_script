@@ -12,10 +12,11 @@ from collections import deque
 import codecs
 import time
 import re
-mailto_list=['124724272@qq.com']
+mailto_list=['xxxxxx@xxx.com']
 mail_host="smtp.163.com"
-mail_user="lolilukia"
-mail_pass="lj940905"    
+mail_user="xxxxxxx"
+mail_pass="xxxxxxx"   
+#对于163邮箱来说，mail_pass这里不是邮箱密码，而是在设置中设置的smtp授权码   
 mail_postfix="163.com" 
 def send_mail(to_list,sub,content):  
     me="hello"+"<"+mail_user+"@"+mail_postfix+">"  
